@@ -11,238 +11,248 @@
 <body onload="loadElements()">
     <div class="grid2">
         <div class="joc">
-            <div class="titol">
-                <h1>MASTERMIND</h1>
+            <div class="top">
+                <div class="titol">
+                    <h1>MASTERMIND</h1>
+                </div>
+                <div id="marcador">
+                    <div class="score-left">
+                        <p id="nametag">User</p>
+                    </div>
+                    <div class="score-right">
+                        <p id="vigtag"> Victories: </p>
+                    
+
+                    <p id="lostag"> Derrotes: </p>
+                    </div>
+                </div>
             </div>
-            <div id="marcador">
-                <p id="nametag">User</p>
-                <p id="vigtag"> Victories: </p>
-                <p id="lostag"> Derrotes: </p>
+            <div class= "game">
+                <table id="table-game">
+                    <tr id="input-row">
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1"></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1"></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1"></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1"></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td>
+                            <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                        <td>
+                            <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
+                        </td>
+                    </tr>
+                </table>
+                <table id="table-result">
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+
+                    
+                    <tr>
+                        <td><img class="tick" src="images/tick.png"></td>
+                        <td>0</td>
+                        <td><img class="tick" src="images/tick-yellow.png"></td>
+                        <td>0</td>
+                    </tr>
+                </table>
             </div>
-            <table id="table-game">
-                <tr id="input-row">
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1"></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1"></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1"></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1"></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-
-                
-                <tr>
-                    <td>
-                        <input type="text" oninput="onFill(event,0)" onkeydown="detectBack(event,0)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,1)" onkeydown="detectBack(event,1)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,2)" onkeydown="detectBack(event,2)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                    <td>
-                        <input type="text" oninput="onFill(event,3)" onkeydown="detectBack(event,3)" class="input-num" maxlength="1" disabled></input>
-                    </td>
-                </tr>
-            </table>
-            <table id="table-result">
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-
-                
-                <tr>
-                    <td><img class="tick" src="images/tick.png"></td>
-                    <td>0</td>
-                    <td><img class="tick" src="images/tick-yellow.png"></td>
-                    <td>0</td>
-                </tr>
-            </table>
         </div>
     </div>
 </body>

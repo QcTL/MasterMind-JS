@@ -36,7 +36,7 @@ function loadElements(){
 
     // Show the name of the user in the screen.
     const user = window.localStorage.getItem('user');
-    document.getElementById('nametag').textContent="El jugador actual és: " + user; 
+    document.getElementById('nametag').textContent= user; 
 
     //Show the number of wins and loses of the user.
     const win = window.localStorage.getItem('scoreWins');
@@ -163,7 +163,7 @@ function lowerInputsOneRow(newTableValue){
     let table = document.getElementById("table-game");
     var rows = table.getElementsByTagName('tr'); //Vigila perquè ara hi ha dues taules
     var cells = rows[nRowsAdded].children;
-    rows[nRowsAdded].id = "";
+    rows[nRowsAdded].id = "full-row4";
     
 
     for(i = 3; i >= 0; i--){
