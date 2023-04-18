@@ -77,7 +77,7 @@ function onFill(e,nInput){
 
     //If the key is not <Retorn> and the value is not empty, the input has been filled and we will focus the next input.
     if (key != 8 && key != 46 && nInputNumb[nInput].value != "") {
-
+        console.log("TRYING");
         //If its not the last input we will focus the next one
         if(nInput < 3){
             nInputNumb[nInput+1].focus();

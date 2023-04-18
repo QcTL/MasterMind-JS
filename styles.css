@@ -14,20 +14,77 @@ html, body{
     grid-template-rows: 1fr 2fr 1fr 1fr;
 }
 
+
 .logintab {
     grid-column: 2;
     grid-row: 2;
     padding: 60px 10px;
     border: 3px solid rgb(3, 3, 3);
     text-align: center;
-    background-color: aliceblue;
     border-radius: 25px;
 }
 
+
+.logintab p{
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+
+.logintab h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.input-form button{
+    padding: 10px;
+
+    font-size: 2em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    background-color: #727272;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    width: 25vw;
+    height: 6vh;
+
+    padding: 5px;
+   
+
+    max-width: 700px;
+    
+}
+
+.input-form{
+    width: 75vw;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    max-width: 650px;
+    background: #e0e0e0;
+    border-radius: 200px;
+}
+
+.input-form input{
+    border: none;
+    background: #e0e0e0;
+    height: 6vh;
+    width: 50vw;
+    border-radius: 20px;
+    font-size: 1.5em;
+
+
+    text-align: left;
+    padding-left: 40px;
+    max-width: 700px;
+}
+
+
 /*PART DE MULTIMIND*/
 .grid2{
-    padding-left: 100px;
-    padding-right: 100px;
+
 }
 
 .joc {
@@ -219,4 +276,21 @@ img.tick {
     margin: 0px;
     padding: 0px;
     margin-left: 5px;
+}
+
+.game-desc{
+    background-color: #CFDBD5;
+   
+    padding: 20px;
+    width: 100%;
+
+    text-align: justify;
+    text-justify: inter-word;
+
+    box-sizing: border-box;
+    font-size: 1.3em;
+    font-weight: bold;
+
+    position: fixed;
+    bottom: 0;
 }
