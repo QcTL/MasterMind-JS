@@ -41,8 +41,8 @@ function loadElements(){
     //Show the number of wins and loses of the user.
     const win = window.localStorage.getItem('scoreWins');
     const lost = window.localStorage.getItem('scoreLost');
-    document.getElementById('vigtag').textContent = "Victories: " + win;
-    document.getElementById('lostag').textContent = "Derrotes: " + lost;
+    document.getElementById('vigtag').textContent = "Wins: " + win;
+    document.getElementById('lostag').textContent = "Loss: " + lost;
 
     //We focus the first input to start entering digits.
     nInputNumb[0].focus();
@@ -128,12 +128,15 @@ function numberIsValid(nextNum){
     updateHits(nCorrect, nSameNum);
     
     if(nCorrect === 4){ //If the 4 digits are correct you won
-        alert("YOU WIN " + window.localStorage.getItem('user') + "!!");
+        //alert("YOU WIN " + window.localStorage.getItem('user') + "!!");
 
         const win = window.localStorage.getItem('scoreWins');
         window.localStorage.setItem('scoreWins', parseInt(win) + 1);
-        window.open('mastermind.html', '_self');
+        //window.open('mastermind.html', '_self');
         gameEnded = true;
+
+        lowerInputsOneRow(nextNum,true);
+        
     }else if(nRowsAdded >= 9){ //We'll have added 9 rows at max because the first one doesn't count.
         alert("YOU HAVE BEEN DEFEATED " + window.localStorage.getItem('user') );
 
@@ -141,9 +144,10 @@ function numberIsValid(nextNum){
         window.localStorage.setItem('scoreLost', parseInt(lost) + 1);
         window.open('mastermind.html', '_self');
     }
-    else lowerInputsOneRow(nextNum); //If you haven't won or been defeated you lower the inputs one row
+    else lowerInputsOneRow(nextNum,false); //If you haven't won or been defeated you lower the inputs one row
     clearInputs();
 }
+
 
 //Triggered when backslash is pressed
 function detectBack(e, nInput){
@@ -154,7 +158,7 @@ function detectBack(e, nInput){
 }
 
 // A row of inputs is added under the current one.
-function lowerInputsOneRow(newTableValue){
+function lowerInputsOneRow(newTableValue, isCorrect){
     //Copiem el valor he hem de posar per no modificar-ho
     let curTable = newTableValue;
 
@@ -163,7 +167,11 @@ function lowerInputsOneRow(newTableValue){
     let table = document.getElementById("table-game");
     var rows = table.getElementsByTagName('tr'); //Vigila perquè ara hi ha dues taules
     var cells = rows[nRowsAdded].children;
-    rows[nRowsAdded].id = "full-row4";
+    if(!isCorrect){
+        rows[nRowsAdded].id = "full-row";
+    }else{
+        rows[nRowsAdded].id = "completed-row";
+    }
     
 
     for(i = 3; i >= 0; i--){
@@ -255,6 +263,8 @@ function generateValidNumber(){
 //Change values of the hint table to contain in the correct layer the nDigitCorrect(same place same digit) and the nDigitGuessed(diferent place, same digit)
 function updateHits(nDigitCorrect, nDigitGuessed){
     let table = document.getElementById("table-result");
-    table.rows[nRowsAdded].cells[1].innerHTML = nDigitCorrect;
-    table.rows[nRowsAdded].cells[3].innerHTML = nDigitGuessed;
+    let eleCls = table.rows[nRowsAdded].cells[0].children[0];
+
+    eleCls.querySelector("div .result-green p").innerHTML = nDigitCorrect;
+    eleCls.querySelector("div .result-yellow p").innerHTML = nDigitGuessed;
 }

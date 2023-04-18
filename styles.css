@@ -26,7 +26,6 @@ html, body{
 
 /*PART DE MULTIMIND*/
 .grid2{
-    padding-top: 20px;
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -46,34 +45,31 @@ html, body{
 .top{
     border-radius: 5px;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: #CFDBD5;
+
+    width: 100vw;
 }
 
 .titol {
     text-align: center;
     margin: 0px;
-    background-color: #CFDBD5;
+  
     border-radius: 5px;
-    width: 250px;
-    padding-left: 100px;
-    padding-right: 100px;
-
-    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
 #marcador {
-    background-color: #CFDBD5;
-    grid-column: 1/3;
-
     border-radius: 5px;
-
-    width: 100%;
 
     display:flex ;
     flex-direction: row;
     justify-content: space-between;
+
+    width: 250px;
+
 }
 
 .score-left{
@@ -85,6 +81,8 @@ html, body{
     font-weight: bold;
 
     margin-left: 30px;
+
+    font-size: 1.5em;
 }
 
 .score-right{
@@ -95,6 +93,7 @@ html, body{
     line-height: 0;
     padding: 10px;
     margin-right: 10px;
+    font-size: 1.2em;
 }
 
 /*TAULES*/
@@ -121,7 +120,7 @@ input{
     display:flex ;
     flex-direction: row;
     justify-content: center;
-    background-color: #E8EDDF ;
+    margin-top: 5vh;
 }
 
 #table-game{
@@ -139,14 +138,23 @@ input{
     border-radius: 5px;
     border-width: 2px;
 
+    height: 55px;
+    width: 55px;
+
     margin: 0px;
     padding: 0px;
-    font-size: 1.3em;
+    font-size: 2em;
     font-weight: bold;
 }
 
 #table-game #input-row td{
     border: 10px solid rgb(97, 97, 97);
+    border-radius: 5px;
+    border-width: 3px;
+}
+
+#table-game #completed-row td{
+    border: 10px solid rgb(71, 194, 33);
     border-radius: 5px;
     border-width: 3px;
 }
@@ -187,9 +195,28 @@ img.tick {
     grid-column: 2;
     text-align: center;
     table-layout: fixed;   
-    width: 300px;
+    width: 100px;
 }
 
 #table-result tr td{
     width: 2px;
+}
+
+.result-green {
+    display:flex ;
+    flex-direction: row;
+    color: green;
+}
+
+.result-yellow{
+    display:flex ;
+    flex-direction: row; 
+    color: orange;
+}
+
+.result-tick p{
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 5px;
 }
