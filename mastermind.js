@@ -128,11 +128,9 @@ function numberIsValid(nextNum){
     updateHits(nCorrect, nSameNum);
     
     if(nCorrect === 4){ //If the 4 digits are correct you won
-        //alert("YOU WIN " + window.localStorage.getItem('user') + "!!");
 
         const win = window.localStorage.getItem('scoreWins');
         window.localStorage.setItem('scoreWins', parseInt(win) + 1);
-        //window.open('mastermind.html', '_self');
         gameEnded = true;
 
         lowerInputsOneRow(nextNum,true);
@@ -159,17 +157,19 @@ function detectBack(e, nInput){
 
 // A row of inputs is added under the current one.
 function lowerInputsOneRow(newTableValue, isCorrect){
-    //Copiem el valor he hem de posar per no modificar-ho
+    //We copy the value that we gave to not modify it.
     let curTable = newTableValue;
 
 
-    //Obtenim tots els td de la linia que hem de ocupar seguent:
+    //Obtain all the td in the next line
     let table = document.getElementById("table-game");
-    var rows = table.getElementsByTagName('tr'); //Vigila perquè ara hi ha dues taules
+    var rows = table.getElementsByTagName('tr');
     var cells = rows[nRowsAdded].children;
     if(!isCorrect){
+
         rows[nRowsAdded].id = "full-row";
     }else{
+        //If you guessed correctly you win!
         rows[nRowsAdded].id = "completed-row";
     }
     
