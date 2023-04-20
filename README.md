@@ -29,5 +29,8 @@ Afterwards we'll compare the entered numbers digit by digit to know how many num
 simple substraction we'll be able to have both the number of digits that appear in positions different from where they should (we'll name them correct numbers) and 
 numbers that appear in the position they have in the correct number (we'll name them guessed numbers).
 
-![MasterMind](https://user-images.githubusercontent.com/71326643/233481524-a0ec7c18-f292-4248-a8de-9f54708ca28a.png)
-> Base Image Of Game
+> ![MasterMind](https://user-images.githubusercontent.com/71326643/233481524-a0ec7c18-f292-4248-a8de-9f54708ca28a.png)
+> Image of Login
+
+> ![MasterMind2](https://user-images.githubusercontent.com/71326643/233482143-ecde33d8-70a1-4527-8d60-c23dbc1d6313.png)
+> Image of login
