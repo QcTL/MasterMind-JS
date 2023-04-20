@@ -294,3 +294,120 @@ img.tick {
     position: fixed;
     bottom: 0;
 }
+
+/* POP UP*/
+
+.popup-win{
+    position: absolute;
+    width: 50vw;
+    background-color: rgb(233, 231, 227);
+    border: solid rgb(97, 97, 97) 3px ;
+    border-radius: 20px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    align-items: center;
+    padding: 30px;
+
+    justify-content: space-between;
+
+    visibility: hidden;
+}
+
+.popup-win p{
+    font-size: 2.4vh;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.popup-win-shown{
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+
+    visibility: visible;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.popup-win p{
+    background: transparent;
+    text-align: center;
+}
+
+.replay-button{
+    width: 150px;
+    border: none;
+    background: rgb(207, 207, 207);
+    border: solid rgb(233, 231, 227);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    color: black;
+}
+
+
+
+.popup-lost{
+    position: absolute;
+    width: 50vw;
+    background-color: rgb(233, 231, 227);
+    border: solid rgb(97, 97, 97) 3px ;
+    border-radius: 20px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    align-items: center;
+    padding: 30px;
+
+    justify-content: space-between;
+
+    visibility: hidden;
+}
+
+.popup-lost p{
+    font-size: 2.4vh;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.popup-lost-shown{
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+
+    visibility: visible;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.popup-lost p{
+    background: transparent;
+    text-align: center;
+}

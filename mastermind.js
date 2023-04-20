@@ -136,11 +136,12 @@ function numberIsValid(nextNum){
         lowerInputsOneRow(nextNum,true);
         
     }else if(nRowsAdded >= 9){ //We'll have added 9 rows at max because the first one doesn't count.
-        alert("YOU HAVE BEEN DEFEATED " + window.localStorage.getItem('user') );
 
         const lost = window.localStorage.getItem('scoreLost');
         window.localStorage.setItem('scoreLost', parseInt(lost) + 1);
-        window.open('mastermind.html', '_self');
+
+        let popupWin = document.querySelector(".popup-lost");
+        popupWin.classList.add("popup-lost-shown");
     }
     else lowerInputsOneRow(nextNum,false); //If you haven't won or been defeated you lower the inputs one row
     clearInputs();
@@ -171,6 +172,9 @@ function lowerInputsOneRow(newTableValue, isCorrect){
     }else{
         //If you guessed correctly you win!
         rows[nRowsAdded].id = "completed-row";
+
+        let popupWin = document.querySelector(".popup-win");
+        popupWin.classList.add("popup-win-shown");
     }
     
 
@@ -267,4 +271,8 @@ function updateHits(nDigitCorrect, nDigitGuessed){
 
     eleCls.querySelector("div .result-green p").innerHTML = nDigitCorrect;
     eleCls.querySelector("div .result-yellow p").innerHTML = nDigitGuessed;
+}
+
+function replay(){
+    window.open('mastermind.html', '_self');
 }
